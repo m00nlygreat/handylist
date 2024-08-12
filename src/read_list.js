@@ -2,7 +2,6 @@ const fs = require('fs');
 const items_list = require('../view/item_list');
 
 const list = (path) => {
-    console.log(path);
     const readdir = fs.readdirSync(path);
     const board_id = path.split('/').pop();
     const items = readdir.filter(file => file.endsWith('.json'));
