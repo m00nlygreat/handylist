@@ -3,13 +3,9 @@ const app = express();
 
 const PORT = process.env.PORT || 80;
 
-const html = (filename) => {
-    return require(`./view/${filename}`)()
-}
+const html = require('./src/html');
 
-const assemble = (content) => {
-    return html('header') + html(content) + html('footer');
-}
+const assemble = require('./src/assemble');
 
 // static file serving
 app.use(express.static(__dirname + '/public'));
@@ -23,9 +19,13 @@ app.listen(PORT, () => {
 })
 
 app.get('/', (req, res) =>{
-    res.send(assemble('index'));
+    res.send(assemble(html('index')));
 })
 
-app.post('/write_item', require('./src/write_item'));
+app.post('/write_item/:board_id', require('./src/write_item'));
 
-app.get('/delete_item/:id', require('./src/delete_item'));
+app.get('/delete_item/:board_id/:id', require('./src/delete_item'));
+
+app.post('/new_board', require('./src/create_board'));
+
+app.get('/:board_id', require('./src/read_board'));

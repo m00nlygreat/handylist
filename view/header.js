@@ -15,7 +15,7 @@ module.exports = (meta) => {
     <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime"></script>
     <title>${meta?.title ?? 'Handylist'}</title>
 </head>
-<body>   
+<body class="h-screen flex flex-row justify-center">   
     `
 }
 
