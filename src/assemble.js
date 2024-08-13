@@ -1,5 +1,3 @@
-const html = require('./html');
-
-module.exports = (content) => {
-    return html('header') + content + html('../view/footer');
+module.exports = (content, title, css) => {
+    return require('../view/header')(title, css) + content + require('../view/footer')();
 }

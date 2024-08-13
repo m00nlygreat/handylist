@@ -1,4 +1,4 @@
-module.exports = (meta) => {
+module.exports = (title, css) => {
     return `
 <!DOCTYPE html>
 <html lang="en">
@@ -11,9 +11,10 @@ module.exports = (meta) => {
     padding: 0px;
     box-sizing: border-box;
     }
+    ${css}
     </style>
     <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime"></script>
-    <title>${meta?.title ?? 'Handylist'}</title>
+    <title>${title ?? 'Handylist'}</title>
 </head>
 <body class="h-screen flex flex-row justify-center">   
     `

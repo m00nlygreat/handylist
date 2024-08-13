@@ -7,5 +7,8 @@ module.exports = (board_id, url) => {
     ${require('../view/new_item')(board_id)}
     ${require('../src/read_list')(`./data/${board_id}`)}
     </div>
+    <script>
+        document.getElementById('content').focus();
+    </script>
     `
 }

@@ -3,7 +3,6 @@ const app = express();
 
 const PORT = process.env.PORT || 80;
 
-const html = require('./src/html');
 
 const assemble = require('./src/assemble');
 
@@ -19,7 +18,7 @@ app.listen(PORT, () => {
 })
 
 app.get('/', (req, res) =>{
-    res.send(assemble(html('index')));
+    res.send(assemble(require('./view/index')));
 })
 
 app.post('/write_item/:board_id', require('./src/write_item'));
