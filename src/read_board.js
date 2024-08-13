@@ -2,8 +2,11 @@ const fs = require('fs');
 const assemble = require('../src/assemble');
 
 const mdCSS = `
-.md a {text-decoration:none; word-wrap: break-word; word-break: break-all;}
-.md li {margin-left: 16px; list-style-type: disc;}
+.md {
+    a {text-decoration:none; word-wrap: break-word; word-break: break-all;}
+    li {margin-left: 16px; list-style-type: disc;}
+    iframe, img {width: 100%;}
+}
 `
 
 const read_board = (req, res) =>{

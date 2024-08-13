@@ -18,7 +18,7 @@ app.listen(PORT, () => {
 })
 
 app.get('/', (req, res) =>{
-    res.send(assemble(require('./view/index')));
+    res.send(assemble(require('./view/index')()));
 })
 
 app.post('/write_item/:board_id', require('./src/write_item'));
