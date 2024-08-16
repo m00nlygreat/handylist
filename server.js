@@ -25,6 +25,8 @@ app.post('/write_item/:board_id', require('./src/write_item'));
 
 app.get('/delete_item/:board_id/:id', require('./src/delete_item'));
 
+app.get('/get_last/:board_id', require('./src/get_last'));
+
 app.post('/new_board', require('./src/create_board'));
 
 app.get('/:board_id', require('./src/read_board'));
