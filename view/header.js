@@ -10,13 +10,14 @@ module.exports = (title, css) => {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: monospace;
     }
     ${css}
     </style>
     <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime"></script>
     <title>${title ?? 'Handylist'}</title>
 </head>
-<body class="h-screen flex flex-col items-center">   
+<body class="h-screen flex flex-col items-center bg-gray-200">   
     `
 }
 
