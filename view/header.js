@@ -12,7 +12,7 @@ module.exports = (css, title) => {
     box-sizing: border-box;
     font-family: monospace;
     }
-    input {
+    input, textarea {
     font-size: 16px;
     }
     ${css}
