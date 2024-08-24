@@ -12,6 +12,9 @@ module.exports = (css, title) => {
     box-sizing: border-box;
     font-family: monospace;
     }
+    input {
+    font-size: 16px;
+    }
     ${css}
     </style>
     <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime"></script>
