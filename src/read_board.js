@@ -10,7 +10,7 @@ const read_board = (req, res) =>{
     if(!checkdir){
         res.redirect(`/?boardID=${board_id}`);
     } else {
-        res.send(assemble(require(`../view/board.js`)(board_id, url),mdCSS, null));
+        res.send(assemble(require(`../view/board.js`)(board_id, url),mdCSS, `${board_id} - lists.name`));
     }
 
 }
