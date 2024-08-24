@@ -15,7 +15,7 @@ module.exports = (css, title) => {
     ${css}
     </style>
     <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime"></script>
-    <title>${title ?? 'Handylist'}</title>
+    <title>${title ?? 'lists.name'}</title>
 </head>
 <body class="h-screen flex flex-col items-center bg-gray-200">   
     `
