@@ -1,4 +1,4 @@
-module.exports = (title, css) => {
+module.exports = (css, title) => {
     return `
 <!DOCTYPE html>
 <html lang="en">

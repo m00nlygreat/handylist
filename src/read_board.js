@@ -1,13 +1,7 @@
 const fs = require('fs');
 const assemble = require('../src/assemble');
 
-const mdCSS = `
-.md {
-    a {text-decoration:none; word-wrap: break-word; word-break: break-all;}
-    li {margin-left: 16px; list-style-type: disc;}
-    iframe, img {width: 100%;}
-}
-`
+const mdCSS = require('../style/md_css.js')();
 
 const read_board = (req, res) =>{
     url = `${req.protocol}://${req.get('host')}${req.originalUrl}`;
@@ -16,7 +10,7 @@ const read_board = (req, res) =>{
     if(!checkdir){
         res.redirect(`/?boardID=${board_id}`);
     } else {
-        res.send(assemble(require(`../view/board.js`)(board_id, url),null,mdCSS));
+        res.send(assemble(require(`../view/board.js`)(board_id, url),mdCSS, null));
     }
 
 }

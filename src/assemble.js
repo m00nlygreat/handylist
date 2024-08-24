@@ -1,3 +1,3 @@
-module.exports = (content, title, css) => {
-    return require('../view/header')(title, css) + content + require('../view/footer')();
+module.exports = (content, css, title) => {
+    return require('../view/header')(css, title) + content + require('../view/footer')();
 }
